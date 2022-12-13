@@ -50,6 +50,6 @@ runs:
   - name: Upload Silicon results
     uses: actions/upload-artifact@v3
     with:
-      name: hvcc-build-mac-intel-unity
+      name: hvcc-build-mac-silicon-unity
       path: |
         HeavyBuild/${{ inputs.output-patch-name }}/unity/build/macos/arm64e/Release/
