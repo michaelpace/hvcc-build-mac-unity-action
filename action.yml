@@ -33,7 +33,7 @@ runs:
     with:
       name: hvcc-build-mac-intel-unity
       path: |
-        HeavyBuild/${{ inputs.output-patch-name }}/unity/build/macos/arm64e/Release/
+        HeavyBuild/${{ inputs.output-patch-name }}/unity/build/macos/x86_64/Release/
   - name: Run hvcc AGAIN
     uses: michaelpace/run-hvcc-action@464a1d2de611b96be47d322d578bdf24e908fdab
     with:
