@@ -34,6 +34,13 @@ runs:
       name: hvcc-build-mac-intel-unity
       path: |
         HeavyBuild/${{ inputs.output-patch-name }}/unity/build/macos/arm64e/Release/
+  - name: Run hvcc AGAIN
+    uses: michaelpace/run-hvcc-action@464a1d2de611b96be47d322d578bdf24e908fdab
+    with:
+      pd-file: ${{ inputs.pd-file }}
+      search-paths: ${{ inputs.search-paths }}
+      generator: ${{ inputs.generator }}
+      output-patch-name: ${{ inputs.output-patch-name }}
   - name: Run xcodebuild for Silicon
     shell: bash
     run: xcodebuild -project HeavyBuild/${{ inputs.output-patch-name }}/unity/xcode/Hv_${{ inputs.output-patch-name }}_Unity.xcodeproj -arch arm64e -alltargets
