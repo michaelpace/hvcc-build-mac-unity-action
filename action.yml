@@ -44,6 +44,9 @@ runs:
   - name: Run xcodebuild for Silicon
     shell: bash
     run: xcodebuild -project HeavyBuild/${{ inputs.output-patch-name }}/unity/xcode/Hv_${{ inputs.output-patch-name }}_Unity.xcodeproj -arch arm64e -alltargets
+  - name: List directory contents
+    shell: bash
+    run: ls -R .
   - name: Upload Silicon results
     uses: actions/upload-artifact@v3
     with:
