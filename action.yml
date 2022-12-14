@@ -1,4 +1,4 @@
-name: Build HVCC for Windows
+name: Build HVCC for Mac
 
 inputs:
   pd-file:
@@ -15,6 +15,12 @@ runs:
   steps:
   - name: Checkout repo
     uses: actions/checkout@v1
+  - name: Run debug commands (pwd)
+    shell: bash
+    run: pwd
+  - name: Run debug commands (ls)
+    shell: bash
+    run: ls -R .
   - name: Run hvcc
     uses: michaelpace/run-hvcc-action@7de02972eaea31540d8a266d8748c97dcec3b19a
     with:
