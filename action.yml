@@ -13,16 +13,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-  - name: Checkout repo
-    uses: actions/checkout@v3
-    with:
-      submodules: recursive
-  - name: Run debug commands (pwd)
-    shell: bash
-    run: pwd
-  - name: Run debug commands (ls)
-    shell: bash
-    run: ls -R .
   - name: Run hvcc
     uses: michaelpace/run-hvcc-action@7de02972eaea31540d8a266d8748c97dcec3b19a
     with:
